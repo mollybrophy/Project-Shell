@@ -11,7 +11,8 @@ from fastapi.templating import Jinja2Templates
 from sqlalchemy import select, update
 from sqlalchemy.exc import OperationalError
 from passwords import check_password_hash
-from . import agent, security
+import agent
+import security
 from .database import SessionLocal, init_db
 from .models import User, LoginSession, ChatMessage, UserMemory, MemoryHistory, LoginFailure
 from .settings import ROOT, SESSION_TIMEOUT
